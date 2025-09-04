@@ -1,0 +1,81 @@
+{
+	"files.eol": "\n",
+	"editor.formatOnSave": true,
+	"editor.tabSize": 2,
+	"files.trimTrailingWhitespace": true,
+	"files.insertFinalNewline": true,
+	"diffEditor.ignoreTrimWhitespace": true,
+	"editor.detectIndentation": false,
+
+	// 讓 Prettier 成為主要 formatter（含 Tailwind class 排序）
+	"[json]": { "editor.defaultFormatter": "vscode.json-language-features" },
+	"[jsonc]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+
+	// 存檔時依語言跑對應的「修錯」動作
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.codeActionsOnSave": { "source.fixAll.eslint": "explicit" }
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.codeActionsOnSave": { "source.fixAll.eslint": "explicit" }
+	},
+	"[html]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.codeActionsOnSave": { "source.fixAll.eslint": "explicit" },
+		"editor.tabSize": 2
+	},
+	"[css]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.codeActionsOnSave": { "source.fixAll.stylelint": "explicit" }
+	},
+	"[scss]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.codeActionsOnSave": { "source.fixAll.stylelint": "explicit" }
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.codeActionsOnSave": {
+			"source.fixAll.eslint": "explicit"
+		}
+	},
+	"[javascriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.codeActionsOnSave": {
+			"source.fixAll.eslint": "explicit"
+		}
+	},
+	"[vue]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.codeActionsOnSave": {
+			"source.fixAll.eslint": "explicit"
+		}
+	},
+
+	// 讓 ESLint/Stylelint 擴充套件知道要檢查哪些語言
+	"eslint.validate": [
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact",
+		"html",
+		"vue"
+	],
+	"eslint.alwaysShowStatus": true,
+	"eslint.format.enable": true,
+	"eslint.lintTask.enable": true,
+
+	"stylelint.enable": true,
+	"stylelint.validate": ["css", "scss"],
+	// 避免 VS Code 內建 CSS/SCSS 檢查與 Stylelint 重複提示
+	"css.validate": false,
+	"scss.validate": false,
+
+	// Tailwind 提示
+	"tailwindCSS.emmetCompletions": true,
+	"tailwindCSS.includeLanguages": { "typescript": "typescript", "html": "html", "vue": "html" },
+
+	"editor.minimap.enabled": true,
+	"breadcrumbs.enabled": true,
+	"html.format.wrapAttributes": "auto"
+}
